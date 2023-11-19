@@ -3,6 +3,7 @@ body{
   font-family:Roboto arial;
   font-size: 15px;
   font-weight: bold;
+  font-family: Roboto;
 
 }
 .unit-holder{
@@ -53,11 +54,15 @@ body{
   z-index: 1;
 }
 .or-header-img{
-  width: 50px;
+  width: 45px;
   border-radius: 5px;
   padding-right: 2px;
+  height: 28px;
 }
-.first-head-dv{
+.first-head-dv,#mobile2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 30px;
    color: green;
@@ -83,6 +88,11 @@ body{
 .noti-button:hover .notis-popup{
   opacity: 1;
   pointer-events: all;
+
+}
+.noti-button:focus .notis-popup,.add-button:focus .add-hover{
+  opacity: 0;
+  pointer-events: none;
 
 }
 .notis{
@@ -477,9 +487,10 @@ body{
   #mobile2 h1{
     font-family: 0px;
   }
-  .noti-button{
-    width: 35px;
-    height: 35px;
+  .notis{
+    align-items: center;
+    justify-content: right;
+    padding-right: 10px;
   }
   #mobile4{
     display: none;
@@ -494,7 +505,9 @@ body{
 
 }
 @media only screen and (max-width: 500px) {
-  
+  body{
+    padding-left:0 ;
+  }
   .enterkeys{
     padding: 0px 0px
   }
@@ -504,6 +517,21 @@ body{
   #mobile4{
     display: block;
 
+  }
+  #mobile2{
+    font-size: 24px; 
+  }
+  .list-contain{
+    width: 100%;
+  }
+  .body-carrier,.body-holder{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .body-holder{
+    padding-right: 3px;
+    margin: 0;
   }
 
   .add-button{
