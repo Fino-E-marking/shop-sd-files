@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-Provision login</title>
+ 
+  <style>
+    body{
+      background-image: url(all-icon/background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh
+       
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+      .mobile-1p1,.mobile-1p2,.mobile-1p3{
+        text-align: center;
+        font-weight: bold;
+        color: green;
+        
+      }
+      .mobile-1p1{
+        padding-top: 280px;
+        font-size: 150px;
+
+      }
+      .mobile-1p2 img{
+        width: 130px;
+        border-radius: 15px;
+      }
+      .mobile-1p3{
+        font-size: 90px;
+      }
+      .mobile-1p4{
+        text-align: center;
+        width: 100%;
+
+      }
+      .mobile-login-box{
+        width: 100%;
+        background-color: black;
+        padding: 10px 30px 10px 20px;
+        color: white;
+        font-size: 50px;
+        margin-top: 200px;
+        font-weight: bold;
+      }
+      .mobile-login-box input{
+        height: 70px;
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 30px;
+        border-radius: 7px;
+      }
+      .mobile-login-box input::placeholder{
+        padding-left: 10px;
+      }
+      
+      .lb{
+        padding-left: 5px;
+      }
+      .mobile-login-box button{
+        height: 70px;
+        background-color: blue;
+        color: white;
+        width: 100%;
+        font-size: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+      .mobile2-1p1,.mobile2-1p2,.mobile2-1p3{
+        display: none;
+      }
+      @media (max-width: 387px) {
+        .mobile-1p1,.mobile-1p2,.mobile-1p3{
+          display: block;
+        }
+        .mobile2-1p1,.mobile2-1p2,.mobile2-1p3{
+          display: none;
+        }
+      }
+      @media (min-width: 388px) {
+      .mobile-1p1,.mobile-1p2,.mobile-1p3{
+        display: none;
+      }
+      .mobile2-1p1,.mobile2-1p2,.mobile2-1p3{
+        display: block;
+      }
+      .mobile2-1p1,.mobile2-1p2,.mobile2-1p3{
+        text-align: center;
+        font-weight: bold;
+        color: green;
+        
+      }
+      .mobile2-1p1{
+        padding-top: 100px;
+        font-size: 190px;
+
+      }
+      .mobile2-1p2 img{
+        width: 130px;
+        border-radius: 15px;
+      }
+      .mobile2-1p2{
+        font-size: 125px;
+      }
+    
+      .mobile2-1p3{
+        font-size: 90px;
+      }
+      .mobile2-1p4{
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+      
+        
+    
+    
+  </style>
+</head>
+  <body>
+    <p class="mobile-1p1">Welcome To</p>
+    <p class="mobile-1p2">
+      <button>
+        <img src="all-icon/e-p pf1.jpeg" alt="profile image">
+      </button>
+      E Provision 
+    </p>
+    <p class="mobile-1p3">
+      Online Sale
+    </p>
+    <p class="mobile2-1p1">Welcome </p>
+    <p class="mobile2-1p2">To
+      <button>
+        <img src="all-icon/e-p pf1.jpeg" alt="profile image">
+      </button>
+      E Provision 
+    </p>
+    <p class="mobile2-1p3">
+      Online Sale
+    </p>
+
+      
+    <p class="mobile-1p4">
+      E provision is an online platform that <br> provide quality 
+      goods at good and afortable <br> prices, to get started login <br>
+      or <a href="#">create an acount</a> 
+    </p>
+    <div class="mobile-login-box">
+      <label class="lb" for="username">User Name</label><br>
+      <input type="text" id="username" placeholder="enter username" minlength="4" maxlength="8" required><br>
+
+      <label class="lb" for="pasword">pasword</label><br>
+      <input type="password" placeholder="enter pasword" id="pasword" minlength="8" maxlength="15"><br>
+
+      <button class="login-button">Login</button>
+    </div>
+  </body>
+</html>

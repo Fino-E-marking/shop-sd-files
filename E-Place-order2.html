@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="E pro styles/E-PLace-order.css">
+    <title>PLace order</title>
+  </head>
+  <body>
+    <div class="orderl-header">
+      <div id="desktop" class="first-head-dv">
+         <h1>
+          <img class="or-header-img" src="all-icon/e-p pf1.jpeg" alt="">
+           E Provision Orderlist
+         </h1> 
+      </div>
+      <div id="mobile2" class="first-head-dv">
+        <h1>
+          <img id="desktop" class="or-header-img" src="all-icon/e-p pf1.jpeg" alt="">
+           Orderlist
+        </h1>
+      </div>
+      <div class="notis">
+        <button class="noti-button">
+          <img class="notification-icon" src="icons/notifications.svg" alt="notification">
+          <div class="notis-popup" id="notis-phide">notification</div>
+          <div class="notis-num" id="notis-nhide">0</div>
+        </button>
+      </div> 
+    </div>
+    <div class="body-carrier">
+      <div class="body-holder">
+        <div class="enterkeys">
+          <div id="enter">
+            <label for="name">Item name:</label>
+            <select id="name">
+              <option value="emty">emty</option>
+              <option value="Bavaria can beer">Bavaria can beer</option>
+              <option value="Amigo 5kg">Amigo 5kg</option>
+              <option value="Amigo 25kg">Amigo 25kg</option>
+              <option value="Amigo 50kg">Amigo 50kg</option>
+              <option value="Skoll beer">Skoll beer</option>
+              <option value="Bavarial bottle beer">Bavarial bottle beer</option>
+              <option value="Savon faco">Savon faco</option>
+              <option value="Mayor 5l">Mayor 5l</option>
+              <option value="Mayor 3L">Mayor 3L</option>
+              <option value="Mayor 1l">Mayor 1l</option>
+              <option value="0ilio 5l">0ilio 5l</option>
+              <option value="Oilio 1l">Oilio 1l</option>
+              <option value="Active 5l">Active 5l</option>
+              <option value="Wity chocolate 2.8l">Wity chocolate 2.8l</option>
+              <option value="Choco loco chocolate 2.8l">Choco loco chocolate 2.8l</option>
+              <option value="Bambi chocolate 2.8l">Bambi chocolate 2.8l</option>
+              <option value="Tartiana chocolate 2.8l">Tartiana chocolate 2.8l</option>
+              <option value="Valledor butter 2.7l">Valledor butter 2.7l</option>
+              <option value="La croix 5l">La croix 5l</option>
+              <option value="La croix 1l">La croix 1l</option>
+              <option value="Baron 5l">Baron 5l</option>
+              <option value="La croix  sachets">La croix  sachets</option>
+              <option value="Iron sponge red(12)">Iron sponge red(12)</option>
+              <option value="Iron sponge net(12)">Iron sponge net(12)</option>
+              <option value="Magic mamy sponge(24)">Magic mamy sponge(24)</option>
+              <option value="Savon mayor">Savon mayor</option>
+              <option value="Savon clean">Savon clean</option>
+              <option value="Savon uno">Savon uno</option>
+              <option value="Savon  anti crise">Savon  anti crise</option>
+              <option value="Savon pakeh">Savon pakeh</option>
+              
+            </select>
+          </div>
+
+          <div id="enter">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="0" max="500" value="0">
+          </div>
+
+          <div id="enter">
+            <label for="description">Description:</label>
+            <select id="description" >
+              <option value="emty">emty</option>
+              <option value="Carton">Carton</option>
+              <option value="Palette">Palette</option>
+              <option value="Bag">Bag</option>
+              <option value="Parket">Parket</option>
+              <option value="Tin">Tin</option>
+              <option value="Liter">Liter</option>
+              <option value="sachets">sachets</option>
+            </select>
+          </div>
+
+          <div id="enter">
+            <button onclick="
+              if (names.value === `emty`) {
+                alert(`Enter Item name`)
+              }else if (quantitys.value === `0`) {
+                alert(`Enter Quantity`)
+              }else if (descriptions.value === '') {
+                alert(`Enter description/contain`) 
+              }else if (descriptions.value === 'emty') {
+                alert(`Enter description/contain`) 
+              }else{
+                orderF();
+                fun5();
+              }
+              
+            " class="js-add-button add-button">Add to list"
+              <p class="add-hover" id="add-hide">add to orderlist</p>
+            </button><br>
+          </div>
+
+        </div>
+        
+        <div class="unit-amount">
+          <div class=" unit-holder">
+            <p>Unit:</p> 
+            <p class="unit-price"></p>
+          </div>
+          <div class="unit-holder">
+            <p>Amount:</p>
+            <p class="amount"></p>
+          </div>
+        </div>
+        
+          <p class="pop-up" id="pop-bhide">
+            Added list
+          </p>
+        <hr>
+        
+        <div class="list-contain">
+          <div class="list-header">
+            <dvi id="desktop">
+              <p>Item name</p>
+            </dvi>
+            <dvi id="mobile">
+              <p> Name</p>
+            </dvi>
+            <dvi id="desktop">
+              <p>Quantity</p>
+            </dvi>
+            <dvi id="mobile">
+              <p>Qty</p>
+            </dvi>
+            <dvi id="desktop">
+              <p>Description</p>
+            </dvi>
+            <dvi id="mobile3">
+              <p>Contain</p>
+            </dvi>
+            <dvi id="mobile4">
+              <p>Contn</p>
+            </dvi>
+            <dvi id="desktop">
+              <p>Unit</p>
+            </dvi>
+            <dvi id="mobile">
+              <p>Unit</p>
+            </dvi>
+            <dvi class="mobile" id="desktop">
+              <p>Amount</p>
+            </dvi>
+            <dvi id="mobile3">
+              <p>Amount</p>
+            </dvi>
+            <dvi id="mobile4">
+              <p>Amnt</p>
+            </dvi>
+            <div id="desktop">
+              <p>Option</p>
+            </div>
+            <div id="mobile3">
+              <p>Option</p>
+            </div>
+            <div id="mobile4">
+              <p>Optn</p>
+            </div>
+          </div>
+          
+          <div class="screen-display"></div>
+        </div>
+        <div class=" total-holder">
+          <p>Total:</p> 
+          <p class="total-price"></p>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-containt">
+      <div class="screen-mobile"></div>
+    </div>
+
+    <script src="E Pro script/E-PLace-order.js"></script>
+  </body>
+</html>

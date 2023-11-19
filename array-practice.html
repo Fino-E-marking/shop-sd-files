@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>array practice</title>
+</head>
+<body>
+  
+<script>
+  const nums = [{
+    name: 'john',
+    year: 10
+  },{
+    name: 'marry',
+    year: 15
+  },{
+    name: 'paul',
+    year: 4
+  }];
+  nums.push({
+    name: 'peter',
+    year: 20
+  });
+
+  nums.splice(3, 1)
+  console.log(nums);
+  let total = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    const {year} = num;
+    total += year;
+  }
+
+  console.log(total);
+
+  console.log(nums)
+</script>
+
+</body>
+</html>

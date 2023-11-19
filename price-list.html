@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Price list</title>
+    <style>
+      body{
+        padding-top: 102px;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .containt{
+        background-color: rgb(10, 10, 10);
+        font-family: arial;
+        color: rgb(14, 13, 13);
+        border: solid;
+        border-color: black;
+        border-width: 1px;
+        max-width: 1000px;
+        flex: 1;
+        
+      }
+      .main-contain{
+        display: flex;
+        justify-content: center;
+      }
+      .image-icon{
+        width: 70px;
+        height: 47px;
+      }
+      .holder{
+        display: grid;
+        grid-template-columns: 70px 1fr 1fr 1fr;
+        row-gap: 1px;
+        column-gap: 1px;
+        margin-top: 1px;
+        
+      }
+      .name-text{
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        padding-top: 3px;
+        font-size: 19px;
+      }
+      .imge-section,.name-section{
+        background-color: rgb(245, 244, 244);
+      }
+      .description-page,.cost-page{
+        background-color: black;
+        text-align: center;
+        
+      }
+      .desdescription-cotaian,.cost-contain{
+        background-color: white;
+        
+      }
+      .desdescription-cotaian,.cost-contain{
+        color: rgb(77, 76, 76);
+        font-size: 15px;
+        height: 100%;
+      }
+      
+      .instructor{
+        background-color: white;
+        text-align: center;
+        padding: 2px 0px;
+        font-weight: bold;
+
+      }
+
+      .item-title{
+        display: grid;
+        grid-template-columns: 70px 1fr 1fr 1fr;
+        column-gap: 1px;
+        border-top: solid;
+        border-width: 1px;
+        background-color: black;
+        text-align: center;
+      }
+      .description-type,.image,.price,.item-name{
+        background-color: white;
+        color: black;
+      }
+
+
+      .header{
+        background-color: rgb(20, 20, 20);
+        color: rgb(29, 29, 156);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 99px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+      }
+      .header p{
+        font-family: arial;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .p2{
+        font-size:25px;
+        margin-top: 3px;
+        margin-left: 15px;
+        color: white;
+      }
+      .e-profile{
+        width: 50px;
+        border-radius: 25px;
+      }
+      .e-p-title{
+        display: grid;
+        width: 200px;
+        grid-template-columns: 50px 1fr;
+        background-color: rgb(190, 190, 190);
+        padding: 3px;
+        border-radius: 9px;
+      }
+      .p1{
+            font-family: arial;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        text-shadow:2px 3px 5px hsl(330, 1%, 51%), -2px -3px 5px hsl(330, 3%, 71%);
+        color: rgb(68, 32, 199);
+        margin-top: 0;
+      
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="e-p-title">
+        <img class="e-profile" src="all-icon/e-p pf1.jpeg" alt="profile image">
+        <p class="p1">E Provision</p>
+      </div>
+      <p class="p2">Price List</p>
+      
+    </div>
+    <div class="main-contain">
+      <div class="containt">
+        <div class="instructor">
+          <p>Bottle beer avialable and prices</p>
+        </div>
+        <div class="item-title">
+          <div class="image">Image</div>
+          <div class="item-name">Item name</div>
+          <div class="description-type">Description</div>
+          <div class="price">Price</div>
+        </div>
+        <div class="holder">
+          <div class="imge-section">
+            <img class="image-icon" src="icons/skoll.jpeg" alt="image of skoll beer">
+          </div>
+          <div class="name-section">
+            <p class="name-text">skoll beer</p>
+          </div>
+          <div class="description-page">
+            <div class="desdescription-cotaian">
+              <p>palet</p>
+              <p>bottle</p>
+            </div>
+          </div>
+          <div class="cost-page">
+            <div class="cost-contain">
+              <p>CFA 21000</p>
+              <p>CFA 1000</p>
+              <P></P>
+            </div>
+          </div>
+        </div>
+        <div class="holder">
+          <div class="imge-section">
+            <img class="image-icon" src="icons/bavaria.jpeg" alt="image of bavaria bottle">
+          </div>
+          <div class="name-section">
+            <p class="name-text">Bavaria bottle</p>
+          </div>
+          <div class="description-page">
+            <div class="desdescription-cotaian">
+              <p>palet</p>
+              <p>bottle</p>
+            </div>
+          </div>
+          <div class="cost-page">
+            <div class="cost-contain">
+              <p>CFA 17000</p>
+              <p>CFA 800</p>
+              <P></P>
+            </div>
+          </div>
+        </div>
+        <div class="holder">
+          <div class="imge-section">
+            <img class="image-icon" src="icons/bavaria can.jpeg" alt="image of bavaria can">
+          </div>
+          <div class="name-section">
+            <p class="name-text">Bavaria can</p>
+          </div>
+          <div class="description-page">
+            <div class="desdescription-cotaian">
+              <p>palet</p>
+              <p>can</p>
+            </div>
+          </div>
+          <div class="cost-page">
+            <div class="cost-contain">
+              <p>CFA 17000</p>
+              <p>CFA 800</p>
+              <P></P>
+            </div>
+          </div>
+        </div>
+        <div class="holder">
+          <div class="imge-section">
+            <img class="image-icon" src="icons/helneken.jpg" alt="image of heineken beer">
+          </div>
+          <div class="name-section">
+            <p class="name-text">Heineken beer</p>
+          </div>
+          <div class="description-page">
+            <div class="desdescription-cotaian">
+              <p>palet</p>
+              <p>bottle</p>
+            </div>
+          </div>
+          <div class="cost-page">
+            <div class="cost-contain">
+              <p>CFA 18000</p>
+              <p>CFA 1000</p>
+              <P></P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

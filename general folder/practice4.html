@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+  <button onclick="
+    const coin = Math.random();
+    let result = '';
+
+    if (coin >= 0 && coin < 1/2) {
+      result = `tail`;
+    } else if (coin >= 1/2 && coin < 1) {
+      result = `head`;
+    }
+
+    let guess = '';
+    if (result = 'head') {
+      guess = `you won`
+    } else if (result = `tail`){
+      guess = `you lose`
+    }
+
+    console.log(`you choice ${result},  ${guess}`)
+    document.querySelector('.js-track').innerHTML = `you choice ${result},  ${guess}`;
+
+  ">period1</button>
+  <p class="js-track"></p>
+
+  <button onclick="
+  const play = {
+    computer: 200,
+    yon: 185,
+    lose: 15
+  };
+  console.log(play);
+
+  
+  ">period3</button>
+  
+
+   <script>
+     const product = {
+      name: 'socks',
+      price: 1090
+     };
+    product.name = 'shirt';
+     console.log(product);
+      
+
+   </script>
+</body>
+</html>

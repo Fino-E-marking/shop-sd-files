@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-Provision login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      background-image: url(all-icon/background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+       
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .first-container{
+      
+      left: 50px;
+      right: 50px;
+      top: 50px;
+      bottom: 70px;
+      display: grid;
+      grid-template-columns: 1fr ;
+      border-style: solid;
+      border-color: blueviolet;
+      
+      max-width: 900px;
+      max-height: 70vh;
+      
+    }
+    .a-contain{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 70px;
+      height: 100%;
+      border-color: green;
+      border-style: solid;
+      width: 100%;
+      flex: 1;
+      
+    }
+
+    .b-contain-p{
+      font-size: 23px;
+      text-align: center;
+      height: 100%;
+      border-color: brown;
+      border-style: solid;
+      width: 100%;
+  
+
+    }
+
+    .c-contain{
+      height: 100%;
+      position: relative;
+      border-color: yellow;
+      border-style: solid;
+      margin-top: 10px;
+      width: 100%;
+      background-color: blue;
+      height: 500px;
+    }
+    .a-c-p1,.a-c-p2-1,.a-c-p3{
+      font-family:Roboto arial;
+      color: green;
+      font-weight: bold;
+      font-size: 100px;
+    }
+    .a-c-p2{
+      font-size: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .a-c-p2-1{
+      margin-left: 15px;
+      font-size: 70px;
+    }
+    .a-c-p3{
+      
+      font-size: 80px;
+    }
+    .a-c-p1,.a-c-p3,.a-c-p2{
+      width: 100%;
+      text-align: center;
+    }
+    .e-profile{
+    width: 100%;
+    border-radius: 25px;
+    }
+    .e-p-title{
+      display: grid;
+      width: 490px;
+      height: 90px;
+      grid-template-columns: 100px 1fr;
+      padding: 3px;
+      border-radius: 9px;
+      
+    
+    
+    }
+  .p1{
+        font-family:Roboto arial;
+    font-size: 70px;
+    text-align: center;
+    padding-left: 5px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    font-weight:bold ;
+    color: green;
+  
+  
+  }
+  .button-tl{
+    padding: 4px;
+    background-color: rgb(231, 230, 230);
+    width: 120px;
+    height: 100%;
+    border-radius: 7px;
+    border: none;
+    
+  }
+  
+  .c-sub-contain{
+    position: absolute;
+    border-style: solid;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    bottom: 20px;
+    
+    
+    padding: 10px 20px 0px 10px;
+    font-size: 30px;
+    display: grid;
+    
+    font-family: Roboto arial;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .c-sub-contain input{
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    margin: 5px;
+    margin-left: 0;
+
+  }
+  .c-sub-contain input::placeholder{
+    font-size: 20px;
+    padding-left: 5px;
+  }
+  .login-button{
+    background-color: rgb(73, 73, 248);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .button{
+    padding: 15px 10px;
+  
+  }
+  #pasword,#username{
+    font-family: Roboto arial;
+    font-size: 30px;
+  }
+
+
+    @media screen {
+      
+    }
+    .dialog-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+  </style>
+</head>
+  <body >
+    <div class="dialog-box">
+      <div class="first-container">
+        <div class="a-contain">
+          <p class="a-c-p1">Welcome To</p>
+          <div class="a-c-p2">
+            <div class="e-p-title">
+              <button class="button-tl">
+                <img class="e-profile" src="all-icon/e-p pf1.jpeg" alt="profile image">
+              </button>
+              <p class="p1">E Provision</p>
+            </div>
+            <div  class="a-c-p2-1">
+              Online
+            </div>
+          </div>
+          <p class="a-c-p3"> Sale</p>
+        </div>
+        <div class="b-contain">
+          <p class="b-contain-p">E provision is an online platform that provide quality <br>
+          goods at good and afortable prices, to get started login <br>
+              or <a href="#">create an acount</a> </p>
+        </div>
+        <div class="c-contain">
+          <div class="c-sub-contain">
+            <div>
+              <label for="username">User Name</label>
+              <input type="text" id="username" placeholder="enter username" minlength="4" maxlength="8" required>
+            </div>
+            <div>
+              <label for="pasword">pasword</label>
+              <input type="password" placeholder="enter pasword" id="pasword" minlength="8" maxlength="15">
+            </div>
+              <button class="login-button">Login</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

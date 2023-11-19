@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Place an order</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body{
+        padding-top: 125px;
+        font-family:Roboto arial;
+        font-size: 15px;
+        font-weight: bold;
+
+      }
+      .unit-holder{
+        display: flex;
+      }
+      .unit-amount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .unit-amount div{
+        margin: 0px 50px;
+      }
+
+      .screen-display{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 5px;
+        padding: 2px;
+        text-align: center;
+        border-style: solid;
+        border-width: 1px;
+      }
+      .list-contain{
+        display: grid;
+        grid-template-rows: 50px 1fr;
+      }
+      .list-header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 2px;
+        row-gap: 10px;
+        padding-left: 2px;
+        font-weight: bold;
+        font-size: 17px;
+        text-align: center;
+      }
+      .orderl-header{
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        z-index: 1;
+      }
+      .or-header-img{
+        width: 50px;
+        border-radius: 5px;
+        padding-right: 2px;
+      }
+      .first-head-dv{
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         color: green;
+         font-weight: bold;
+         font-size: 38px;
+          
+      }
+
+      .notification-icon{
+        width: 30px;
+        height: 30px;
+      }
+      .noti-button{
+        background-color: rgb(173, 171, 171);
+        border-style: none;
+        border-radius: 50%;
+        position: relative;
+
+      }
+      .noti-button:hover .notis-popup{
+        opacity: 1;
+        pointer-events: all;
+
+      }
+      .notis{
+        display: flex;
+        align-items: center;
+      }
+      .delete-button{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 3px;
+      }
+      .add-button{
+        background-color: green;
+        color: white;
+        border: none;
+        margin-left: 5px;
+        padding: 3px 10px;
+        border-radius: 4px;
+        position: relative;
+        white-space: nowrap;
+      }
+      .add-button:hover .add-hover{
+        pointer-events: all;
+        opacity: 1;
+      }
+
+      .enterkeys{
+        display: flex;
+        justify-content: center;
+      }
+      .enterkeys div{
+        margin-left: 15px;
+      }
+      .pop-up{
+        font-weight: bold;
+        color: green;
+        font-size: 24px;
+        position: fixed;
+        right: 40%;
+        top: 180px;
+        text-align: center;
+        background-color: white;
+      }
+
+      .add-hover{
+        position: absolute;
+        background-color: gray;
+        text-wrap: wrap-now;
+        bottom: -45px;
+        left: -17px;
+        right: 3px;
+        padding: 5px 8px;
+        white-space: nowrap;
+        font-size: 12px;
+        border-radius: 2px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.04s;
+      }
+      .notis-popup{
+        position: absolute;
+        background-color: rgb(102, 101, 101);
+        padding: 5px 10px;
+        bottom: -38px;
+        right: -4px;
+        border-radius: 3px;
+        color: white;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.04s;
+      }
+      .notis-num{
+        position: absolute;
+        background-color: red;
+        top: -15px;
+        right: -5px;
+        color: white;
+        font-size: 12px;
+        padding: 5px 8px;
+        border-radius: 50%;
+      }
+      #notis-nhide,#pop-bhide{
+        display: none;
+        pointer-events: none;
+      }
+      .total-holder{
+        font-weight: bold;
+        padding-left: 15px;
+        font-size: 17px;
+        display: flex;
+      }
+
+     
+    
+    </style>
+  </head>
+  <body>
+    <div class="orderl-header">
+      <div class="first-head-dv">
+          <img class="or-header-img" src="all-icon/e-p pf1.jpeg" alt="">
+          <p> E Provision Orderlist</p>
+      </div>
+      <div class="notis">
+        <button class="noti-button">
+          <img class="notification-icon" src="icons/notifications.svg" alt="notification">
+          <div class="notis-popup" id="notis-phide">notification</div>
+          <div class="notis-num" id="notis-nhide">0</div>
+        </button>
+      </div> 
+    </div>
+    <div class="enterkeys">
+
+      <div>
+        <label for="name">Item name:</label>
+        <select id="name">
+          <option value="emty">emty</option>
+          <option class="ovaltine" value="Ovaltine">
+            Ovaltine
+          </option>
+          <option value="Nido">Nido</option>
+          <option value="Dano">Dano</option>
+          <option value="Rice">Rice</option>
+          <option value="Skoll">Skoll</option>
+          <option value="Bavarial">Bavaria</option>
+          <option value="Savon-clean">Savon cleanr</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="0" max="500" value="0">
+      </div>
+
+      <div>
+        <label for="description">Description:</label>
+        <select id="description" >
+          <option value="emty">emty</option>
+          <option value="Carton">Carton</option>
+          <option value="Palette">Palette</option>
+          <option value="Bag">Bag</option>
+          <option value="Parket">Parket</option>
+          <option value="Tin">Tin</option>
+        </select>
+      </div>
+
+      <div>
+        <button onclick="
+          orderf();
+          
+        " class="js-add-button add-button">Add to list"
+          <p class="add-hover" id="add-hide">add to orderlist</p>
+        </button><br>
+      </div>
+
+    </div>
+    
+    <div class="unit-amount">
+      <div class=" unit-holder">
+        <p>Unit:</p> 
+        <p class="unit-price"></p>
+      </div>
+      <div class="unit-holder">
+        <p>Amount:</p>
+        <p class="amount"></p>
+      </div>
+    </div>
+    
+      <p class="pop-up" id="pop-bhide">
+        Added list
+      </p>
+    <hr>
+    
+    <div class="list-contain">
+      <div class="list-header">
+        <dvi>
+          <p>Item name</p>
+        </dvi>
+        <dvi>
+          <p>Quantity</p>
+        </dvi>
+        <dvi>
+          <p>Description</p>
+        </dvi>
+        <dvi>
+          <p>Unit</p>
+        </dvi>
+        <dvi>
+          <p>Amount</p>
+        </dvi>
+        <div>
+          <p>Option</p>
+        </div>
+      </div>
+      <div class="screen-display"></div>
+    </div>
+    <div class=" total-holder">
+      <p>Total:</p> 
+      <p class="total-price"></p>
+    </div>
+    <p class="store-total"></p>
+    <p class="storecopy"></p>
+
+    <script src="E Pro script/E-place-order.js">
+      let notisnum = document.getElementById('notis-nhide')
+      let bodypop = document.getElementById('pop-bhide');
+      
+      let totalholder = document.querySelector('.total-price');
+      let screent = document.querySelector('screen-display');
+      let notisnumadd = document.querySelector('.notis-num');
+      let addbutton = document.querySelector('.js-add-button');
+      let quantity = document.getElementById('quantity');
+      let amount = document.querySelector('.amount');
+      let unit = document.querySelector('.unit-price');
+      let description = document.getElementById('description');
+      let name = document.getElementById('name');
+      //addbutton.addEventListener('click', orderf);
+      name.addEventListener('input',fun1);
+      quantity.addEventListener('input',fun3);
+      description.addEventListener('input',fun2);
+      amount.innerHTML = unit.innerText*quantity.value;
+      unit.innerHTML = 0;
+      description.value = '';
+      notisnumadd.innerHTML = 0;
+    
+      if (amount.value === 'NaN' || 'undefine') {
+          amount.value = `enter description2`;
+      }
+
+
+
+
+     
+
+      totalF();
+      function totalF() {
+        let totalprice =0;
+        for (let i = 0; i < orderlist.length; i++) {
+          const total = orderlist[i];
+          const {amounttype} = total;
+          totalprice += Number(amounttype)
+          document.querySelector('.total-price').innerHTML = totalprice 
+        }
+      }
+
+      
+
+     
+      
+
+      function fun1() {
+       /* const name = document.getElementById('name');
+        const quantity = document.getElementById('quantity');
+        const description = document.getElementById('description');
+        const unit = document.querySelector('.unit-price');
+        const total = document.querySelector('.total');
+       */ if (description.value === '') {
+          unit.innerHTML = `enter description`;
+        }
+
+      }
+
+      function fun3() {
+       /* const name = document.getElementById('name');
+        const quantity = document.getElementById('quantity');
+        const description = document.getElementById('description');
+        const unit = document.querySelector('.unit-price');
+        const total = document.querySelector('.total');
+       */ if (description.value === '') {
+          unit.innerHTML = `enter description`;
+          amount.innerHTML = '0';
+        }
+       
+          amount.innerHTML = unit.innerHTML*quantity.value;
+        
+      }
+
+      function fun2() {
+        const amount = document.querySelector('.amount');
+        if (name.value === 'Ovaltine' && description.value === 'Carton') {
+         unit.innerHTML = 3000; 
+        }else if (name.value === 'Ovaltine' && description.value === 'Tin') {
+         unit.innerHTML = 5000; 
+        }
+        
+       amount.innerHTML = unit.innerHTML*quantity.value;
+       console.log(amount.innerHTML)
+      }
+
+      function fun4() {
+      /*  const storetota2 = document.querySelector('.storecopy');
+        const amount = document.querySelector('.amount');
+        const storetotal = document.querySelector('.store-total');
+        const totalholder = document.querySelector('.total-price');
+       */ const amounts = amount.innerHTML;
+        const notisnumadd2 = document.querySelector('.notis-num');
+        notisnumadd2.innerHTML = Number(notisnumadd2.innerHTML) - 1;
+        if (notisnumadd.innerHTML === '0') {
+          notisnum.id = 'notis-nhide';
+        }
+        
+       /* console.log(totalholder.innerHTML)
+        console.log(amounts)
+      }
+
+       function fun5() {
+        const amount = document.querySelector('.amount');
+        const storetotal = document.querySelector('.store-total');
+        const storetota2 = document.querySelector('.storecopy');
+        const amounts = amount.innerHTML;
+        //storetota2.innerHTML = Number(storetota2.innerHTML)
+       // console.log(storetota2.innerHTML)
+        */
+        }
+       // const storetota2 = document.querySelector('.storecopy'); 
+       // storetota2.innerHTML = amount.innerHTML
+        
+     
+      
+    </script>
+
+  </body>
+</html>

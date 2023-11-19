@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>place order list</title>
+  <style>
+    .contain{
+      position: relative;
+      background-color: brown;
+      display: inline-block;
+    }
+    .button{
+      width: 10px;
+      height: 15px;
+      position: relative;
+      color: blue;
+      
+    }
+    .button8{
+      position: absolute;
+      right: 5px;
+      bottom: 0px;
+    }
+    .edith{
+      position: absolute;
+      background-color: gray;
+      height: 200px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+      padding-left: 0;
+      color: white;
+      bottom: -218px;
+      left: 0;
+      right: -100px;
+      padding-right: 5px;
+  
+      
+    }
+    li{
+      text-align: left;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      padding-left: 5px;
+      align-items: center;
+      display: flex;
+      
+      
+    }
+    li:hover{
+      background-color: rgb(29, 29, 29);
+    }
+    #add{
+      display: none;
+    }
+    
+    .loginl,.loginl2{
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      
+    }
+    #him{
+      display: none;
+    }
+    .loginl{
+      display: none;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <input onkeydown="
+    
+    come();
+   
+    come();
+    function come() {
+    const input = document.querySelector('.input1');
+    const screen = document.querySelector('.screen');
+      if (event.key === 'Enter') {
+      screen.innerHTML = input.value
+    }
+    }
+    
+    " class="input1" placeholder="enter item">
+
+    <div class="button8">
+      <button class="button">
+        &#444
+        <ul class="edith" id="add">
+        <li onclick="
+          ok1();
+          function ok1() {
+            const screen4 = document.querySelector('.screen');
+            const man1 = document.querySelector('.man');
+          const input1 = document.querySelector('.input1');
+          input1.value = man1.innerHTML
+          screen4.innerHTML =  man1.innerHTML
+
+          
+          }
+          
+          " onkeydown="
+          const input2 = document.querySelector('.input1');
+          const screen2 = document.querySelector('.screen');
+          if (event.key === 'Enter') {
+            screen2.innerHTML = input2.value;
+          }
+          " class="man">man</li>
+        <li> woman</li>
+        <li>girl</li>
+        <li>boy</li>
+        <li>child</li>
+      </ul>
+      </button>
+    </div>
+  </div>
+  
+  <p class="screen"></p>
+
+  <br> <hr>
+  <input class="name" placeholder="enter name">
+
+  <input class="password" type="password"  placeholder="password">
+  <br> <hr>
+
+  <button class="login-button" >
+    <a class="loginl"  href="index.html">login</a> 
+    <span class="loginl2">login</span>
+  </button>
+
+  <p class="test"></p>
+  
+  
+
+<script>
+  const adda = document.getElementById('add');
+  const buttona = document.querySelector('.button');
+  buttona.addEventListener('click', act)
+  function act() {
+    if (adda.id === 'add') {
+      adda.id = '';
+    }else{
+      adda.id = 'add';
+    }
+  }
+  console.log(adda.id)
+
+  const name = document.querySelector('.name');
+  const password = document.querySelector('.password');
+  const loginbutton = document.querySelector('.login-button');
+  const login = document.querySelector('.loginl');
+  const ptest = document.querySelector('.test');
+  const login2 = document.querySelector('.loginl2')
+  
+  name.addEventListener('input', enter);
+  password.addEventListener('input', enter);
+  loginbutton.addEventListener('mouseenter', edith);
+  loginbutton.addEventListener('mouseleave', leave);
+  loginbutton.addEventListener('click', forword)
+  
+  function enter() {
+    const names = name.value;
+    const pass = password.value 
+    ptest.innerHTML = name.value+password.value
+    console.log(names, pass)  
+  }
+  
+  function edith() {
+    
+      
+     if (ptest.innerHTML === 'iliasu1234') {
+      login.className = '';
+      login2.id = 'him'; 
+    }else if (ptest.innerHTML === 'felix3034') {
+      login.className = '';
+      login2.id = 'him'; 
+    }  
+    
+    console.log(loginbutton.innerText)
+  }
+  
+
+  function leave() {
+    if (loginbutton.innerText === 'login') {
+      login.className = 'loginl';
+      login2.id = ''; 
+    }else{
+      login2.id = '';
+      login.className = 'loginl'
+    }
+  }
+  
+  function forword() {
+    if (ptest.innerHTML === '13') {
+      login.className = '';
+    }
+   console.log(ptest.innerHTML);
+  }
+  
+  console.log(password.value)
+  console.log(name)
+  console.log(name.value)
+</script>
+</body>
+</html>

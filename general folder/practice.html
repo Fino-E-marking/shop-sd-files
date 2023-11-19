@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+      .last-b{
+      margin-bottom: 100px;
+  
+      }
+      .contain,.headJ{
+        display: grid;
+        grid-template-columns: 200px 150px 100px;
+        font-family: arial;
+        font-size: 15px;
+        column-gap: 10px;
+        row-gap: 10px;
+        background-color: gray;
+      }
+      .contain{
+        align-items: center;
+      }
+      .add-button{
+        background-color: green;
+        color: white;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 15px;
+      }
+      .inputH{
+        font-size: 14px;
+      }
+      .delete-button{
+        background-color: darkred;
+        color: white;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+      }
+    </style>
+</head>
+  <body>
+    <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+      
+      ">Show Quantity</button> 
+    <button onclick="
+      cartQuantity += 1;
+      console.log(`cart quantity: ${(cartQuantity ) }`)
+    ">Add to cart</button>
+    <button onclick="
+      cartQuantity += 2;
+      console.log(`cart quantity: ${(cartQuantity ) }`)
+    ">+2</button>
+    <button onclick="
+      cartQuantity += 3;
+      console.log(`cart quantity: ${(cartQuantity ) }`)
+    ">+3</button>
+    <button onclick="
+      cartQuantity = 0;
+      console.log(`cart was Reset ${(cartQuantity ) }`)
+      console.log(`cart quantity: ${(cartQuantity ) }`)
+    " class="last-b">Reset Cart</button><br>
+
+    <div class="headJ">
+      <input onkeydown="
+        key1();
+      " class="js-input inputH" placeholder="enter name">
+
+      <input onkeydown="
+        key1()
+      " class="js-input2 inputH" type="date">
+
+      <button onclick="
+        add();
+      
+      " class="add-button">Add</button>
+      <div class="js-screen contain"></div>
+    </div>
+    
+
+
+    <script>
+      let cartQuantity = 0;
+      const addnames = [{
+        name: 'E Provision ',
+        duedate: `2023-11-02`
+      }, {
+        name:'Fino Dev',
+        duedate: `2023-11-02`
+      }];  
+      folderF();
+      function folderF() {
+        let folder = '';
+        for (let i = 0; i < addnames.length; i++) {
+          const fileObject = addnames[i];
+          //const name = fileObjectname;
+          //const duedate = fileduedate;
+          const { name, duedate } = fileObject;
+          const fileHtml = `
+          <div>
+            ${name}
+          </div>
+          <div>
+            ${duedate}
+          </div>
+            <button onclick="
+              addnames.splice(${i}, 1)
+              folderF();
+            " class="delete-button">delete</button>
+          `;
+          folder +=  fileHtml
+        }
+      console.log(folder)
+    
+      document.querySelector('.js-screen').innerHTML = folder;
+      }
+
+      function add() {
+        const name = document.querySelector('.js-input');
+        const names = name.value;
+        const date = document.querySelector('.js-input2');
+        const dates = date.value;
+        addnames.push({
+          name: names,
+          duedate: dates
+        });
+        console.log(addnames)
+
+
+        name.value = '';
+        date.value = '';
+
+        folderF();
+        
+      }
+
+
+      function key1() {
+        if (event.key === 'Enter') {
+          add()
+        }
+      }
+
+
+      /*
+      const addnames = [{
+        name: 'E Provision ',
+        duedate: `2023-11-02`
+      }, {
+        name:'Fino Dev',
+        duedate: `2023-11-02`
+      }];  
+      folderF();
+      function folderF() {
+        let folder = '';
+        for (let i = 0; i < addnames.length; i++) {
+          const fileObject = addnames[i];
+          //const name = fileObjectname;
+          //const duedate = fileduedate;
+          const { name, duedate } = fileObject;
+          const fileHtml = `
+          <p>
+            ${name} ${duedate}
+            <button onclick="
+              addnames.splice(${i}, 1)
+              folderF();
+            ">delete</button>
+          </P>
+          `;
+          folder +=  fileHtml
+        }
+      console.log(folder)
+    
+      document.querySelector('.js-screen').innerHTML = folder;
+      }
+
+      function add() {
+        const name = document.querySelector('.js-input');
+        const names = name.value;
+        const date = document.querySelector('.js-input2');
+        const dates = date.value;
+        addnames.push({
+          name: names,
+          duedate: dates
+        });
+        console.log(addnames)
+
+
+        name.value = '';
+
+        folderF();
+        
+      }
+
+
+      function key1() {
+        if (event.key === 'Enter') {
+          add()
+        }
+      }
+      */
+    </script>
+  </body>
+</html>

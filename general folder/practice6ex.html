@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>active</title>
+    <style>
+      .js-tails,.js-heads{
+        padding: 10px 30px ;
+        font-family: arial;
+        font-weight: bold;
+        background-color: blue;
+        color: white;
+        border: none;
+        font-size: 15px;
+        border-radius: 5px;
+      }
+      .js-action{
+        background-color: red;
+      color: white;
+      border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="
+       function2();
+    " class="js-heads">Heads</button>
+
+    <button onclick="
+      function1();
+
+    " class="js-tails">Tails</button>
+
+    <p class="js-result-box"></p>
+    <p class="js-box">emty file</p>
+
+
+    <input onkeydown="
+      function3();
+
+    " class="js-input" placeholder="enter key">
+
+    <button onclick="
+      const Calculator = document.querySelector('.js-input');
+      let enterk = Calculator.value;
+    /*
+      let enterk = Number(Calculator.value);
+    */
+      const screen5 = document.querySelector('.js-screen2');
+      let screenk = screen5.innerHTML;
+      console.log(screenk);
+
+       /*
+      if (enterk < 40) {
+        enterk = enterk + 10;
+      }
+      */
+      document.querySelector('.js-screen2').innerHTML = `my name is ${enterk}`;
+
+    " class="js-calculator">Calculate</button>
+    <p class="js-screen"></p>
+    <p class="js-screen2"></p>
+    <p class="js-screen3">you enter</p>
+    
+
+
+    <script>
+
+      function function3(event) {
+        const inputPlcae = document.querySelector('.js-input');
+    let typeIn = inputPlcae.value
+    document.querySelector('.js-screen3').innerHTML = typeIn
+    
+    
+    
+    console.log(typeIn);
+      }
+
+
+
+     let statement = `you chose:`;
+     let headp = document.querySelector('.js-heads').innerHTML;
+
+     resultBox = `${statement} ${headp}`;
+      let tailsp = 'Tails';
+
+    function function1() {
+
+     JSON.parse(localStorage.getItem('tailsStore'));
+
+      console.log(JSON.parse(localStorage.getItem('tailsStore')));
+      document.querySelector('.js-result-box').innerHTML = `${statement}  ${tailsp}.`;
+
+    const resultType = document.querySelector('.js-tails'); 
+    console.log(resultType);
+
+    if (resultType.innerText === 'Tails') {
+      resultType.innerHTML = `file added`;
+      resultType.classList.add('js-action');
+    }else {
+      resultType.innerHTML = 'Tails';
+      resultType.classList.remove('js-action');
+    }
+
+    const text1 = document.querySelector('.js-box');
+    console.log(text1);
+
+    if (text1.innerText === `emty file`) {
+      text1.innerHTML = `you added a tail file to your store`;
+    }else if (text1.innerText === `you added a file to your store`) {
+  text1.innerHTML = `emty file`;
+}
+    
+    localStorage.setItem('tailsStore', JSON.stringify(text1.innerHTML))
+
+    console.log(JSON.stringify(text1.innerHTML));
+    }
+
+
+    function function2() {
+
+
+ console.log(JSON.parse(localStorage.getItem('headStore')));
+ document.querySelector('.js-result-box').innerHTML = `${statement}  ${headp}.`;
+
+const resultType2 = document.querySelector('.js-heads'); 
+console.log(resultType2);
+
+if (resultType2.innerText === 'Heads') {
+ resultType2.innerHTML = `file added`;
+ resultType2.classList.add('js-action');
+}else {
+ resultType2.innerHTML = 'Heads';
+ resultType2.classList.remove('js-action');
+}
+
+const text2 = document.querySelector('.js-box');
+console.log(text2);
+
+if (text2.innerText === `emty file`) {
+ text2.innerHTML = `you added a head file to your store`;
+}else if (text2.innerText === `you added a head file to your store`) {
+  text2.innerHTML = `emty file`;
+}else if (resultType2.innerText === 'Heads' && text2
+.innerText === `emty file`) {
+  text2.innerHTML = `you added a head file to your store`;
+}else if (resultType2.innerText === 'Heads' && text2
+  .innerText === `you added a tail file to your store`) {
+  text2.innerHTML = `you added a head file to your store`;
+}else if (resultType2.innerText === 'file added' && text2
+.innerText === `emty file`) {
+  text2.innerHTML = `emty file`;
+}else if (resultType2.innerText === 'file added' && text2
+  .innerText === `you added a tail file to your store`) {
+    text2.innerHTML = `emty file`;
+}else if (resultType2.innerText === 'file added' && text2
+  .innerText === `you added a head file to your store`) {
+    text2.innerHTML = `emty file`;
+}else if (resultType2.innerText === 'Heads' && text2
+  .innerText === `you added a head file to your store`) {
+    text2.innerHTML = `you added a head file to your store`;
+}
+
+
+
+console.log(JSON.stringify(text2.innerHTML));
+}
+  
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+p{
+    font-family: arial;
+    margin-top: 0;
+}
+
+.new{
+    color: orangered;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.pro{
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 4px;
+
+}
+
+.pros{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.from{
+    text-align: center;
+    margin-bottom: 10px;
+}
+button{
+    background-color: blue;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+   
+    
+}
+.buy{
+    text-align: center;
+}

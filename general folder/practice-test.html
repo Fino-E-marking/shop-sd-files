@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+    <style>
+     
+    body{
+      padding-top: 100px;
+    }
+    
+    .box1{
+      background-color: rgb(137, 204, 204);
+      width: 300px;
+      height: 300px;
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+    .box2{
+      background-color: rgb(169, 129, 207);
+      width: 300px;
+      height: 300px;
+      padding: 0;
+      margin: 0 ;
+    }
+    .box3{
+      background-color: rgb(207, 131, 131);
+      width: 600px;
+      height: 300px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .js-container{
+      display: flex;
+      flex-wrap: wrap;
+    
+      
+    }
+    .time{
+      position: absolute;
+      bottom: 0px;
+      right: 10px;
+      background-color: black;
+      color: white;
+      padding: 8px;
+    }
+    .head{
+      position: fixed;
+      top: 0;
+      height: 180px;
+      left: 0px;
+      right: 0px;
+      z-index: 1;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input{
+      flex: 1;
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+      padding-left: 22px;
+      
+    }
+    input placeholder {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .bar{
+      background-color: blueviolet;
+      flex: 1;
+      max-width: 800px;
+      min-width: 10px;
+      margin: 0px 10px;
+      display: flex;
+      position: relative;
+      border-radius: 10px;
+      
+    }
+    .js-icon{
+      width: 20px;
+      position: absolute;
+      left: 2px;
+    
+    }
+
+    .icon{
+      background-color: white;
+      height: 30px;
+      width: 30px;
+      margin-left: 5px;
+    }
+    .icon:hover,.menu1 ul li a{
+      opacity: 1;
+    }
+    .option{
+      font-family: arial;
+      width: 150px;
+      display: flex;
+      flex-direction:column ;
+      height:100% ;
+      
+      
+    }
+    .menu1{
+      background-color: gray;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      width: 150px;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+    
+    }
+    .menu1 ul{
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      height: 100%;
+      width: 100%;
+      
+    }
+    .menu1 ul li{
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .menu1 ul li a{
+      text-decoration: none;
+      color: white;
+      width: 100%;
+      height: 100%;
+    
+    }
+    .menu1 ul li a:hover{
+      background-color: blue;
+    }
+    .option:hover + .menu1 ul li a{
+      opacity: 1;
+      background-color: brown;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="head">
+    <div class="option">
+      <img class="icon" src="icons/youtube-apps.svg" alt="icon">
+      <div class="menu1">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">product</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bar">
+      <input type="text" placeholder="search" >
+      <img onclick="
+      
+     document.querySelector('.js-container') = document.querySelector('.js-option');
+      if ( document.querySelector('.js-container') === document.querySelector('.js-option')) {
+        document.querySelector('.js-container').innerHTML = document.querySelector('.js-option').innerHTML 
+      }else{
+        document.querySelector('.js-container').innerHTML = document.querySelector('.js-container').innerHTML
+      }
+      
+      " class="js-icon" src="icons/search.svg" alt="">
+    </div>
+    
+  </div>
+  <div class="js-container">
+    <div class="box1"><img src="icons/bavaria can.jpeg" alt=""><p class="time">5:00</p></div>
+    <div class="box1"><img src="icons/bavaria can.jpeg" alt=""></div>
+    <div class="box2"><img src="icons/bavaria can.jpeg" alt=""></div>
+  </div>
+
+  <script>
+    console.log(document.querySelector('.js-icon'))
+        console.log(document.querySelector('.js-option'));
+        console.log(document.querySelector('.js-container'))
+      
+      
+  </script>
+</body>
+</html> 

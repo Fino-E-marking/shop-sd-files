@@ -1,0 +1,103 @@
+
+  .section-b{
+    vertical-align: bottom;
+  }
+  
+  .name{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+  .volum{
+  color: rgb(161, 151, 151);
+  font-size: 14px;
+  }
+  .section-b{
+  margin-bottom: 5px;
+  }
+  
+  .item-price{
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+.price-in-F{
+    color: brown;
+}
+
+  .country-dct{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+  }
+  .submit{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 80px;
+    border-radius: 10px;
+    transition: opacity 0.15s;
+
+  }
+  .submit:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  }
+  .submit:active{
+    opacity: 0.6;
+  }
+  .order-c{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .price{
+    margin-bottom: 10px;
+  }
+  .order-t{
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  .source{
+    font-size: 17px;
+    margin-top: 7px;
+    margin-bottom: 4px;
+  }
+  .country-dct{
+    font-size: 13px;
+    color: rgb(129, 128, 128);
+  }
+  input{
+    cursor: pointer;
+  }
+  .menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+  @media (max-width: 342px){
+    .menu {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 343px) and (max-width: 683px){
+    .menu {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 684px) and (max-width: 1025px){
+    .menu {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 1026px){
+    .menu {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  .nido-c{
+    width: 225px;
+    height: 225;
+  }
+  .checkers,.cerelac{
+    height: 225px;
+  }
